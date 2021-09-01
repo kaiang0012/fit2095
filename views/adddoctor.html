@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Add Doctor</title>
+</head>
+<body>
+    <div class="header">
+        <h1>FIT2095 Clinic</h1>
+        <h3>Welcome to Week 6 Lab</h3>  
+        <a href="/">Home</a>  
+        <a href="/adddoctor">Add Doctor</a>
+        <a href="/addpatient">Add Patient</a>
+        <a href="/listdoctors">List Doctors</a>
+        <a href="/listpatients">List Patients</a>
+        <a href="/deletepatient">Delete Patient</a>
+        <a href="/updatenumberofpatients">Update Number of Patients</a> 
+    </div>
+    <br>
+    <div class="section">
+        <form action="/adddoctorpost" method="POST">
+            <h3>Add a doctor</h3>
+            <label for="firstname">First Name:</label>
+            <input type="text" name="firstname" id="firstname"/></br>
+            <br>
+            <label for="lastname">Last Name:</label>
+            <input type="text" name="lastname" id="lastname"/></br>
+            <br>
+            <label for="dateofbirth">Date of Birth:</label>
+            <input type="date" name="dateofbirth" id="dateofbirth"/></br>
+            <br>
+            <label for="state">State:</label>
+            <input type="text" name="state" id="state"/></br>
+            <br>
+            <label for="suburb">Suburb:</label>
+            <input type="text" name="suburb" id="suburb"/></br>
+            <br>
+            <label for="street">Street:</label>
+            <input type="text" name="street" id="street"/></br>
+            <br>
+            <label for="unit">Unit:</label>
+            <input type="number" name="unit" id="unit"/></br>
+            <br>
+            <label for="numpatients">Number of Patients:</label>
+            <input type="number" name="numpatients" id="numpatients"/></br>
+            <br>
+            <br>
+            <input type="submit" value="Add Doctor" class="submit"/>
+        </form>
+    </div>
+</body>
+</html>

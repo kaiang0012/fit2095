@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>List Patients</title>
+</head>
+<body>
+    <div class="header">
+        <h1>FIT2095 Clinic</h1>
+        <h3>Welcome to Week 6 Lab</h3>  
+        <a href="/">Home</a>  
+        <a href="/adddoctor">Add Doctor</a>
+        <a href="/addpatient">Add Patient</a>
+        <a href="/listdoctors">List Doctors</a>
+        <a href="/listpatients">List Patients</a>
+        <a href="/deletepatient">Delete Patient</a>
+        <a href="/updatenumberofpatients">Update Number of Patients</a> 
+    </div>
+    <br>
+    <div class="section">
+        <h3>List of Patients</h3>
+        <table>
+            <tr>
+                <td>Full Name</td>
+                <td>Age</td>
+                <td>Date Visit</td>
+                <td>Doc First Name</td>
+                <td>Doc Last Name</td>
+                <td>Case Description</td>
+            </tr>
+            <% for (let i=0;i<patientList.length;i++){ %>
+            <tr>
+                <td> <%=patientList[i].fullName %> </td>
+                <td> <%=patientList[i].age %> </td>
+                <td> <%=patientList[i].dateOfVisit %> </td>
+                <td> <%=patientList[i].doctor.fullName.firstName %> </td>
+                <td> <%=patientList[i].doctor.fullName.lastName %> </td>
+                <td> <%=patientList[i].caseDescription %> </td>
+            </tr>
+            <%}%>
+        </table>
+    </div>
+</body>
+</html>

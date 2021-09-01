@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Add Patient</title>
+</head>
+<body>
+    <div class="header">
+        <h1>FIT2095 Clinic</h1>
+        <h3>Welcome to Week 6 Lab</h3>  
+        <a href="/">Home</a>  
+        <a href="/adddoctor">Add Doctor</a>
+        <a href="/addpatient">Add Patient</a>
+        <a href="/listdoctors">List Doctors</a>
+        <a href="/listpatients">List Patients</a>
+        <a href="/deletepatient">Delete Patient</a>
+        <a href="/updatenumberofpatients">Update Number of Patients</a> 
+    </div>
+    <br>
+    <div class="section">
+        <form action="/addpatientpost" method="POST">
+            <h3>Add a patient</h3>
+            <label for="fullname">Full Name:</label>
+            <input type="text" name="fullname" id="fullname"/></br>
+            <br>
+            <label for="doctorid">Doctor ID:</label>
+            <input type="text" name="doctorid" id="doctorid"/></br>
+            <br>
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="age"/></br>
+            <br>
+            <label for="dateofvisit">Date of Visit:</label>
+            <input type="date" name="dateofvisit" id="dateofvisit"/></br>
+            <br>
+            <label for="casedescription">Case Description:</label>
+            <input type="text" name="casedescription" id="casedescription"/></br>
+            <br>
+            <br>
+            <input type="submit" value="Add Patient" class="submit"/>
+        </form>
+    </div>
+</body>
+</html>
