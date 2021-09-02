@@ -62,6 +62,10 @@ app.get("/listpatients", (req, res) => {
     })
 });
 
+app.get("/invaliddata", (req, res) => {
+	res.render("invaliddata.html");
+})
+
 app.get("*", function (req, res) {
     res.render("404.html");
 });
@@ -85,9 +89,13 @@ app.post("/adddoctorpost", (req, res) => {
 	});
 
 	doctor1.save((err, data) => {
-		if (err) throw err
-		console.log("Doctor data added to DB", data);
-		res.redirect("/listdoctors");
+		if (err){
+			console.log("Failed to add doctor to the DB", err);
+			res.redirect("/invaliddata")
+		} else {
+			console.log("Doctor data added to DB", data);
+			res.redirect("/listdoctors");
+		}	
 	});
 });
 
@@ -102,9 +110,13 @@ app.post("/addpatientpost", (req, res) => {
 	});
 
 	patient1.save((err, data) => {
-		if (err) throw err
-		console.log("Patient data added to DB", data);
-		res.redirect("/listpatients");
+		if (err) {
+			console.log("Failed to add patient to the DB", err);
+			res.redirect("/invaliddata")
+		} else {
+			console.log("Patient data added to DB", data);
+			res.redirect("/listpatients");
+		}
 	});
 });
 
