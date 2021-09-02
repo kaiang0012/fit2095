@@ -13,7 +13,7 @@ let doctorSchema = mongoose.Schema({
     dateOfBirth: {
         type: Date, 
         get: (value) => {
-            return moment(value).format("DDMMYYYY")
+            return moment(value).format("DD/MM/YYYY")
         }
     },
     address: {

@@ -1,4 +1,5 @@
 let mongoose = require('mongoose');
+let moment = require('moment');
 
 let patientSchema = mongoose.Schema({
     fullName: {
@@ -17,6 +18,9 @@ let patientSchema = mongoose.Schema({
     dateOfVisit: {
         type: Date,
         default: Date.now,
+        get: (value) => {
+            return moment(value).format("DD/MM/YYYY")
+        }
     },
     caseDescription: {
         type: String,
