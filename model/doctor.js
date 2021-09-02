@@ -1,4 +1,5 @@
 let mongoose = require('mongoose');
+let moment = require('moment');
 
 let doctorSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
@@ -11,6 +12,9 @@ let doctorSchema = mongoose.Schema({
     },
     dateOfBirth: {
         type: Date, 
+        get: (value) => {
+            return moment(value).format("DDMMYYYY")
+        }
     },
     address: {
         state: {

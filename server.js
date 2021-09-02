@@ -8,7 +8,7 @@ let Doctor = require("./model/doctor");
 let Patient = require("./model/patient");
 const { populate } = require("./model/doctor");
 
-let m = moment().format("MMM Do YY");
+let m = moment();
 
 let app = express();
 const url = "mongodb://localhost:27017/week6lab";
