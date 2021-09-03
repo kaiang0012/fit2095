@@ -62,7 +62,7 @@ app.get("/listpatients", (req, res) => {
     })
 });
 
-app.get("/listdoctors/victoria/", (req, res) => {
+app.get("/listdoctors/victoria", (req, res) => {
 	let filter = { 'address.state': 'VIC' };
 	Doctor.find(filter, (err, data) => {
 		res.render("listdoctors.html", {doctorList: data});
